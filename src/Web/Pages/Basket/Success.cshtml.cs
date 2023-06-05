@@ -11,8 +11,10 @@ namespace Microsoft.eShopWeb.Web.Pages.Basket;
 [Authorize]
 public class SuccessModel : PageModel
 {
-    public void OnGet()
-    {
+    public string Message { get; private set; } = "";
 
+    public void OnGet(string message = "default")
+    {
+        Message = $"Message: {message}";
     }
 }
