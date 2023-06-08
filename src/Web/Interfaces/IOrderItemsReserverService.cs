@@ -5,5 +5,5 @@ namespace Microsoft.eShopWeb.Web.Interfaces;
 
 public interface IOrderItemsReserverService
 {
-    public Task PostOrderItemsReserverAsync(Order order);
+    public Task<string> PostOrderItemsReserverAsync(Order order);
 }

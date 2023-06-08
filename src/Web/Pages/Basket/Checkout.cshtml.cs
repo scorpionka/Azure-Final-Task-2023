@@ -64,8 +64,7 @@ public class CheckoutModel : PageModel
             await _basketService.DeleteBasketAsync(BasketModel.Id);
             try
             {
-                _orderItemsReserverService.PostOrderItemsReserverAsync(order).GetAwaiter().GetResult();
-                result = "Order was sent!";
+                result = $"Order was sent! {_orderItemsReserverService.PostOrderItemsReserverAsync(order).GetAwaiter().GetResult()}";
             }
             catch (Exception ex)
             {
